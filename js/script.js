@@ -23,23 +23,27 @@ console.log(listaSpesa);
 // per stilizzare la mia listaSpesa inizio con l'inizializzare il contenitore di questi
 let listEl = document.getElementById("list");
 
+let buttonListGeneratorEl = document.getElementById("buttonListGenerator");
 
+buttonListGeneratorEl.addEventListener("click", function() {
 
-while (index < listaSpesa.length) {
-    // creo tanti elementi li quanti sono gli elementi della spesa
-    let newLiElement = document.createElement("li");
+    while (index < listaSpesa.length) {
+        // creo tanti elementi li quanti sono gli elementi della spesa
+        let newLiElement = document.createElement("li");
+        
+        // faccio riferimento al genitore
+        listEl.append(newLiElement);
+        
+        // aggiungo a tutti gli elementi create la classe list-item stilizzata in CSS
+        newLiElement.classList.add("list-item");
     
-    // faccio riferimento al genitore
-    listEl.append(newLiElement);
+        // scrivo il contenuto, all'interno del DOM
+        newLiElement.innerHTML = (listaSpesa[index] + "<br>")
     
-    // aggiungo a tutti gli elementi create la classe list-item stilizzata in CSS
-    newLiElement.classList.add("list-item");
+    
+        // per ogni volta che fa il controllo, index dovrà aumentare di 1: 0-1-2-3-4-5-6...
+        index++;
+    
+    }
 
-    // scrivo il contenuto, all'interno del DOM
-    newLiElement.innerHTML = (listaSpesa[index] + "<br>")
-
-
-    // per ogni volta che fa il controllo, index dovrà aumentare di 1: 0-1-2-3-4-5-6...
-    index++;
-
-}
+})

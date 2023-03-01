@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* __________________________________ */
 body {
     text-align: center;
     color: rgb(124, 120, 120);
     background-color: #a41c20;
 }
+/* __________________________________ */
 
 
+/* __________________________________ */
 #list {
     display: flex;
     flex-flow: row wrap;
@@ -22,12 +24,22 @@ body {
     list-style-type: none;
     background-color: #596e8d;
 }
-
-.list-item {
-    margin: 10px;
+/* __________________________________ */
+.list-item, #buttonListGenerator {
     padding: 10px;
     border-radius: 40px;
     background-color: #f4e4a9;
     font-size: 20px;
     cursor: pointer;
+
+}
+/* __________________________________ */
+.list-item {
+    margin: 10px;
+}
+/* __________________________________ */
+#buttonListGenerator {
+    margin: 20px 0;
+    border: 2px solid #596e8d;
+    color: #596e8d;
 }
